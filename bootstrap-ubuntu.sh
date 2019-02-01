@@ -20,7 +20,7 @@ else
 fi
 
 printf "Getting Python on my level...\n"
-sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl > /dev/null
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl
 pyenv install -s 3.7.1 > /dev/null
 eval "$(pyenv init -)"
 
@@ -28,9 +28,9 @@ printf "Installing library dependencies...\n"
 pip install -r requirements.txt > /dev/null
 
 printf "Installing libfreenect...\n"
-sudo apt-get install freenect > /dev/null
+sudo apt-get install freenect
 
 printf "Building the freenect python package...\n"
-python setup.py build_ext --inplace > /dev/null
+python setup.py build_ext --inplace > dev/null
 
 printf "\nAll good!\nYou should now be able to import freenect from python programs.\n"
